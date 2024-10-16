@@ -5,7 +5,7 @@ export const headerLinks = [
   },
   {
     label: "Ny Event",
-    route: "/events/ny",
+    route: "/events/create",
   },
   {
     label: "Min Profil",
