@@ -66,8 +66,8 @@ export async function POST(req: Request) {
       clerkId: id,
       email: email_addresses[0].email_address,
       username: username!,
-      firstName: first_name,
-      lastName: last_name,
+      firstName: first_name || "",
+      lastName: last_name || "",
       photo: image_url,
     };
 
@@ -90,8 +90,8 @@ export async function POST(req: Request) {
 
     const user = {
       username: username!,
-      firstName: first_name,
-      lastName: last_name,
+      firstName: first_name || "",
+      lastName: last_name || "",
       photo: image_url,
     };
 
@@ -104,7 +104,7 @@ export async function POST(req: Request) {
   if (eventType === "user.deleted") {
     const { id } = evt.data;
 
-    const deletedUser = await deleteUser(!id);
+    const deletedUser = await deleteUser(id!);
 
     return NextResponse.json({ message: "OK", user: deletedUser });
   }
