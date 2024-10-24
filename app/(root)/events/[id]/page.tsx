@@ -12,7 +12,7 @@ const EventDetails = () => {
           alt="hero image"
           width={1000}
           height={1000}
-          className="h-full min-h-[300px] p-12 object-cover object-center"
+          className="h-full min-h-[300px] max-h-[600px] p-12 object-cover object-center"
         />
         <div className="flex w-full flex-col gap-8 p-5 md:p-10">
           <div className="flex flex-col gap-6">
